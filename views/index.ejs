@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My CRUD-APP</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1 data-position="header">May node be with us. </h1>
+
+<section data-position = "add-blog">
+    <h2>Add quote</h2>
+    <form action="/blog" method="POST">
+        <input type="text" placeholder = "name" name = "name">
+        <input type="text" placeholder = "blog" name = "blog">
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section data-position = "update-blog">
+    <div>
+        <h2>Div invades!</h2>
+        <p>
+            Replace first Div's blog with a blog written by Div
+        </p>
+        <button id="update-button">Replace Div's blog</button>
+    </div>
+</section>
+
+<section data-position = "delete-blog">
+    <div>
+        <h2>Remove Div's blog!</h2>
+        <p>
+            Delete one Div's blog. Does nothing if there are no more Blogs
+            Div's Blog
+        </p>
+        <button id="delete-button">Delete Div's blog</button>
+    </div>
+    <div id="message"></div>
+</section>
+
+<section data-position = "added-blogs">
+    <h2> Blog Entries </h2>
+    <ul class = "blog1">
+        <% for(var i = 0; i < blog1.length; i++) {%>
+            <li class="blog">
+                <span> <%= blog1[i].name %></span>:
+                <span> <%= blog1[i].blog %></span>
+            </li>
+        <% } %>
+    </ul>
+</section>
+
+
+
+<script src="/main.js"></script>
+
+</body>
+</html>
