@@ -16,8 +16,8 @@ body {
     grid-template-rows: auto auto 2fr;
     grid-template-areas:
     "header header header"
-    "add-blogs update-blog delete-blog"
-    "blogs blogs blogs";
+    "add-blog update-blog delete-blog"
+    "added-blogs added-blogs added-blogs";
     gap: 1rem;
     margin: 0;
     padding: 1rem;
@@ -31,9 +31,9 @@ body {
     grid-area: header;
 }
 
-/*[data-position="add-blog"] {*/
-/*    grid-area: add-blog;*/
-/*}*/
+[data-position="add-blog"] {
+    grid-area: add-blog;
+}
 
 [data-position="update-blog"] {
     grid-area: update-blog;
@@ -44,7 +44,7 @@ body {
 }
 
 [data-position="added-blogs"] {
-    /*grid-area: added-blogs;*/
+    grid-area: added-blogs;
     overflow: scroll;
 }
 
